@@ -3,6 +3,8 @@ import pandas as pd
 from tensorflow import keras
 import matplotlib.pyplot as plt
 
+#TODO find way to set rand seed
+#TODO fix display at the end of all the epochs
 (x_train, y_train), (x_test, y_test) = keras.datasets.fashion_mnist.load_data()
 
 #Have an initial look at what the data is:
@@ -48,9 +50,8 @@ def d_sigmoid(z):
     return sig_z * (1 - sig_z)
 
 #Cost Function (MSE)
-#Ask prof Davila why we add [0] at the end
 def mse(actual, cost):
-    return 0.5 * sum((actual[i] - cost[i]) ** 2 for i in range(10))[0] 
+    return 0.5 * sum((actual[i] - cost[i]) ** 2 for i in range(10))[0]
 
 class MultiLayerNeuron(object):
     def __init__(self, activation_func, activation_derivative_func, cost_func, layers=[784, 120, 120, 120, 10]):
@@ -63,7 +64,7 @@ class MultiLayerNeuron(object):
     def init_weights(self, layers):
         weights = [[0.0]]
         biases = [[0.0]]
-        for i in range(1, len(layers)):
+        for i in range(1, len(layers)): #the np.sqrt coefficient speeds up training
             w_temp = np.random.randn(layers[i], layers[i-1]) #* np.sqrt(2/layers[i-1])
             b_temp = np.random.randn(layers[i], 1) #* np.sqrt(2/layers[i-1])
 

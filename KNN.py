@@ -2,6 +2,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
+# If you have a bunch of stocks w movement, stocks are corellated - nearest neighbors can find which stocks are most similar/dependant on each other based on country of origin, region, sector, time, etc. From that, you can say a given stock has similarity to others near it.
+# Very obvious 
+# Ok to have scripts, but give explanations in notebook.
+# https://medium.com/@thornexdaniel/ml-algorithms-in-the-markets-ddbff48c7e0
 
 data = pd.read_csv("wisconsin_breast_cancer.data")
 print(data.head())
@@ -10,14 +14,12 @@ y = np.array(data.iloc[: , 1])
 y = y.reshape(-1,1)
 y = np.where(y == 'M', 0, 1)
 
-
-
 X = np.array(data.iloc[: , 2:4])
 print(f"Example X value: {X[0]}")
 print(f"Inputs matric shape: {X.shape}")
 
 #Ask Prof Davila why changing the testsize doesn't significantly change the errors created. Is my code wrong?
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.9, random_state=10)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=10)
 
 print(f"Example y_trian value:  {y_train[0]}")
 print(f"Label X_train shape: {X_train.shape}")
