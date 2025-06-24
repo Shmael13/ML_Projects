@@ -1,4 +1,4 @@
-# [K-Nearest Neighbors Classifier]
+# K-Nearest Neighbors Classifier
 This directory contains a notebook outlining a description and implementation of the KNN algorithm in Python using numpy and pandas.
 
 ![KNN](KNN.png)
@@ -22,7 +22,7 @@ $d_i = \sum{|x^i-y^i|}$
 #### Euclidean Distance
 $d_i = \sqrt{\sum{(x^i-y^i)^2}}$
 
-A more complete list of distance formulas can be found [here] (https://machinelearningmastery.com/distance-measures-for-machine-learning/)
+A more complete list of distance formulas can be found [here](https://machinelearningmastery.com/distance-measures-for-machine-learning/)
 
 ### Advantages of KNN
 - No training period
