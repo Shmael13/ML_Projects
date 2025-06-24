@@ -4,7 +4,7 @@ This directory contains a notebook outlining a description and implementation of
 ![KNN](KNN.png)
 __image from https://stataiml.com/posts/knn_in_python__
 
-## [Synopsis] (https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm)
+## [Synopsis](https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm)
 
 K-Nearest Neighbors is an algorithm whereby the properties of an unkown vector are predicted using the neighbors around it. The number of neighbors we take into consideration - k - is what gives the algorithm its name.
 
