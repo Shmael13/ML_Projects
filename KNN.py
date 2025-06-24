@@ -64,3 +64,26 @@ errors = classification_error(X_test, X_train, y_test, y_train, knn, 3)
 
 print(f"y_pred: {y_pred}")
 print(f"Errors: {errors}")
+
+def plot_decision_boundary(model, X_train, y_train, k, h=0.1):
+    x_min, x_max = X_train[:, 0].min() - 1, X_train[:, 0].max() + 1
+    y_min, y_max = X_train[:, 1].min() - 1, X_train[:, 1].max() + 1
+
+    xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
+                         np.arange(y_min, y_max, h))
+    Z = np.array([
+        model.predict(np.array([x, y]), X_train, y_train, k)
+        for x, y in zip(xx.ravel(), yy.ravel())
+    ])
+    Z = Z.reshape(xx.shape)
+
+    plt.figure(figsize=(10, 6))
+    plt.contourf(xx, yy, Z, alpha=0.3, cmap='coolwarm')
+    plt.scatter(X_train[:, 0], X_train[:, 1], c=y_train.ravel(), edgecolors='k')
+    plt.title(f"KNN Decision Boundary (k={k})")
+    plt.xlabel("Feature 1")
+    plt.ylabel("Feature 2")
+    plt.show()
+
+plot_decision_boundary(knn, X_train, y_train, k=3)
+
