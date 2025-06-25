@@ -27,10 +27,12 @@ There are three phases in training a Perceptron.
 3. ### *Update Weights*
     After calculating the difference between the actual outputs and the predicted outputs, we updatet the weights so that the classification performed maps more accurately onto the actual results. This updating is done via the *Learning Algorithm*.
     #### Learning Algorithm
+
     The biases and weights are updated using the formula:
     $bias \leftarrow bias * \eta predicted - actual$
     $w_i \leftarrow w_i * \eta (predicted - actual) * x_i \forall i$
 
 This results in the following 
-![Linearly_Separated](Linearly_separated.png) 
+![Linearly_Separated](Linearly_separated.png)
+
 where the data is split into two separate categories.
