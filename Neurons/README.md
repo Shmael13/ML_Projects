@@ -30,8 +30,9 @@ There are three phases in training a Perceptron.
 
     The biases and weights are updated using the formula:
 
-    $\newline bias \leftarrow bias * \eta predicted - actual$
-    $w_i \leftarrow w_i * \eta (predicted - actual) * x_i \forall i$
+    $\newline bias \leftarrow bias * \eta \hspace predicted - actual$
+
+    $w_i \leftarrow w_i * \eta \hspace (predicted - actual) * x_i \forall i$
 
 This results in the following 
 ![Linearly_Separated](Linearly_separated.png)
