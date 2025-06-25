@@ -29,7 +29,7 @@ There are three phases in training a Perceptron.
     #### Learning Algorithm
 
     The biases and weights are updated using the formula:
-    $bias \leftarrow bias * \eta predicted - actual$
+    $\\ bias \leftarrow bias * \eta predicted - actual$
     $w_i \leftarrow w_i * \eta (predicted - actual) * x_i \forall i$
 
 This results in the following 
