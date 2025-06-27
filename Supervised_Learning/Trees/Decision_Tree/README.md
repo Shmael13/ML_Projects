@@ -1,6 +1,15 @@
 # Diabetes Classification with Decision Trees
+## Description
 
-This project demonstrates a supervised learning pipeline using the Pima Indians Diabetes Dataset. The goal is to predict whether a patient has diabetes (`Outcome=1`) or not (`Outcome=0`) using health-related features. A decision tree classifier is trained on the data, and performance is evaluated with a confusion matrix and the weighted F1 score.
+A decision tree is a non-parametric supervised learning algorithm. It is used in both classification and regression. It consists a tree structure, with a single root node, with many possible internal and leaf nodes. Each node can have 0, 1, or 2 children nodes.
+
+The purpose of each node is to split the dataset into the smallest 'pure' subset it can, by splitting according to the features. The outgoing branches from each node 'feed' into its child nodes. The leaf nodes encapsulate all the possible points within the dataset. However, with more complex datasets, splitting into 'pure' data is not easy.
+
+In order to find the optimal split points within the tree, a divide and conquer algorithm is used, which performs a greedy search for the points. The process of splitting is repeated recursively until all the features have been classified under certain labels. Depending on the complexity of the dataset, all the points may or may not be classified into pure leaf nodes. As a tree grows larger, the leaf nodes contain fewer and fewer points. This data fragmentation can lead to overfitting. 
+To overcome this, sometimes pruning is applied - whereby branches splitting on features with low importance are removed. Another way to imporve accuracy is using ensemble methods like Boosting. 
+
+## Implementation
+This project demonstrates supervised learning using the Pima Indians Diabetes Dataset. The goal is to predict whether a patient has diabetes (`Outcome=1`) or not (`Outcome=0`) using health-related features. A decision tree classifier is trained on the data, and performance is evaluated with a confusion matrix and the weighted F1 score.
 
 ## Dataset
 
@@ -19,7 +28,9 @@ The dataset `diabetes.csv` includes these features:
 
 ## Workflow
 
-1. **Data Scaling**
+1. **Data Preprocessing**
+   - The Data is read from the csv file
+
    - All features except `Outcome` are standardized using the z-score normalization:
      $$
      z = \frac{x - \mu}{\sigma}
@@ -28,20 +39,17 @@ The dataset `diabetes.csv` includes these features:
      - $x$ is a feature value,
      - $\mu$ is the mean,
      - $\sigma$ is the standard deviation.
-
-2. **Train/Test Split**
+   
    - The dataset is split randomly:
      - 75% for training,
      - 25% for testing.
 
-3. **Decision Tree Classifier**
+3. **Model Initialization and Training**
    - A decision tree of maximum depth 3 is trained on the scaled training data.
-
-4. **Visualization**
    - The trained tree is plotted, showing splits on features and class distributions at the leaves.
-
-5. **Evaluation**
-   - Predictions on the test set are compared with true labels using a confusion matrix and the weighted F1 score.
+4. **Model Evaluation**
+   - A confusion matrix of the tree is shown, and its F1 score is calculated
+   - An explanation is given for why F1 scores converge when we continue increasing the max depth.
 
 ---
 
@@ -80,8 +88,7 @@ A **weighted average F1 score** accounts for class imbalance by weighting each c
 
 ## Results
 
-- The weighted average F1 score on the test set was **0.704**.
-
+- The F1 score on the test set was **0.601**.
 - Confusion matrix and decision tree visualization provide insight into model behavior.
 
 ---
