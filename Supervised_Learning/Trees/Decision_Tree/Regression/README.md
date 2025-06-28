@@ -120,3 +120,6 @@ The notebook shows:
 - The trade-off between model complexity (max depth) and overfitting.
 - That a shallow tree (e.g., depth 3) can give a good balance of accuracy and interpretability for this dataset.
 ---
+
+## References
+Images come from: https://www.qualtrics.com/support/stats-iq/analyses/regression-guides/interpreting-residual-plots-improve-regression/
