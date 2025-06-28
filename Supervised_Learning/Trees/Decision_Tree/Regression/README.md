@@ -79,7 +79,7 @@ Evaluate model performance with standard regression metrics:
 ---
 
 ### Residual Analysis
-
+While the error metrics used above may tell us how large our errors are on average, they don't display how the errors are distributed. Residual plots display this, and help us figure out whether errors are randomly scattered around zero, or if they show systemic patterns.
 Residuals are calculated as:
 $Residual = y_{test} - y_{pred}$
 
@@ -88,10 +88,22 @@ $Residual = y_{test} - y_{pred}$
 - Negative residual → prediction too high.
 - Near-zero residual → accurate prediction.
 
+![Ideal_Residuals](ideal_residual.png)
+
 An ideal residual plot:
 - Residuals scatter symmetrically around zero.
 - No clear patterns.
 - Residuals remain close to 0.
+
+![Poor_Residual](poor_residual.png)
+
+If residuals _do_ show patterns, they may display information we can use to correct our model. Some examples certain residual plots and some corrections we might apply to them are:
+- A curve or trend $\rightarrow$ model misses nonlinearity in data
+- Points mostly positive or negative in some ranges $\rightarrow$ model systemically over- or under-predicts
+- Large magnitude in a few points $\rightarrow$ outliers in data
+- Funnel shape $\rightarrow$ may indicate missing variable
+
+
 ---
 
 ## Visualization
