@@ -1,5 +1,5 @@
 # Directory Description
-In this directory, we outline implementations and evaluations of decision trees to perfrom regression and classification tasks, on the 'Advertising.csv' and 'diabetes.csv' datasets respectively. 
+In this directory, we outline implementations and evaluations of decision trees to perfrom regression and classification tasks, on the `Advertising.csv` and `diabetes.csv` datasets respectively. 
 
 ## Decision Tree Description
 A decision tree is a non-parametric supervised learning algorithm. It is used in both classification and regression. It consists a tree structure, with a single root node, with many possible internal and leaf nodes. Each node can have 0, 1, or 2 children nodes.
@@ -12,12 +12,12 @@ To overcome this, sometimes pruning is applied - whereby branches splitting on f
 ---
 
 ## Advantages 
-- Explainable Behavior: The trees split data according to specific and easy-to-understand logic on the features. This, alongside the visual representations of the trees, help making understanding the reason for their behavior easier. It also helps understand which features are given most importance by the model.
-- Flexible: Decision  can be leveraged for both classification and regression tasks. Moreover, it isn't sensitive to corelated variables. For any two highly corelated variables, it will only choose one to split on.
+- __Explainable Behavior:__ The trees split data according to specific and easy-to-understand logic on the features. This, alongside the visual representations of the trees, help making understanding the reason for their behavior easier. It also helps understand which features are given most importance by the model.
+- __Flexible:__ Decision can be leveraged for both classification and regression tasks. Moreover, it isn't sensitive to corelated variables. For any two highly corelated variables, it will only choose one to split on.
 
 ---
  
 ## Disadvantages
-- Overfitting: Complex decision trees often to overfit the data, and don't generalize well to newer data. This can be avoided through the processes of pruning, which halts growth or removes nodes at different stages when there isn't enough data within a node or subtree to justify splitting.
-- Computationally Expensive: Because decision trees use greedy search during construction, they can be a lot more expensive to train than other algorithms.
+- __Overfitting:__ Complex decision trees often to overfit the data, and don't generalize well to newer data. This can be avoided through the processes of pruning, which halts growth or removes nodes at different stages when there isn't enough data within a node or subtree to justify splitting.
+- __Computationally Expensive:__ Because decision trees use greedy search during construction, they can be a lot more expensive to train than other algorithms.
 
