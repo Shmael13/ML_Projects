@@ -66,6 +66,26 @@ Evaluate model performance with standard regression metrics:
 - **R-squared (R²)**  
   $R^2 = 1 - \frac{SS_{res}}{SS_{tot}}$
 
+- Mean Squared Error (MSE): 
+    - Average squared error between expected (y_test) and predicted (y_pred) outputs
+    - Smaller MSE means a better fit
+    - Errors are squared, so it penalizes large errors heavily. This makes it sensitive to outliers
+    - Lower is better
+- Root Mean Squared Error (RMSE):
+    - Square root of MSE
+    - Has the same units as the target variable (sales). This makes it easier to interpret
+    - RMSE approximates average magnitude of prediction error
+    - Lower is better
+- Mean Absolute Error (MAE):
+    - Average absolute difference between expected (y_test) and predicted (y_pred) outputs
+    - Less sensitive to outliers than RMSE
+    - Lower is better
+- R Squared / Coefficient of Determinanation (R2):
+    - Measure of how well model fits data
+    - 1 indicates perfect fit of model to data
+    - 0 indicates model doesn't explain any veriability in data
+    - Higher is better
+
 ---
 
 ### Error vs Max Depth Analysis
