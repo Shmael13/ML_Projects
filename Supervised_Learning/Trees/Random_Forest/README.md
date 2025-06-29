@@ -87,11 +87,3 @@ where:
 - Recall $\left(\frac{TP}{{TP} + {FN}}\right)$
 
 A **weighted average F1 score** accounts for class imbalance by weighting each class’s F1 by its support (number of true instances).
-
----
-
-## Results
-
-- The confusion matrix and feature importance chart provide insight into model performance and highlight which features contributed most to diabetes prediction.
-
----
