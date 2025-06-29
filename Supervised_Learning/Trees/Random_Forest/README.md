@@ -85,5 +85,3 @@ $$F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \t
 where:
 - Precision $\left(\frac{TP}{{TP} + {FP}}\right)$
 - Recall $\left(\frac{TP}{{TP} + {FN}}\right)$
-
-A **weighted average F1 score** accounts for class imbalance by weighting each class’s F1 by its support (number of true instances).
