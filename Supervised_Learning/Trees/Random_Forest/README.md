@@ -1,4 +1,4 @@
-# Directory Description
+# Model Description
 In this directory, we outline implementations and evaluations of random forests to perform classification on the `diabetes.csv` dataset.
 
 ## Random Forest Description
