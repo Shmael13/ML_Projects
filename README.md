@@ -1,5 +1,5 @@
 # Machine Learning Projects
-Creator: Ismail SYed
+Creator: Ismail Syed
 
 This repository contains a collection of machine learning algorithms. Machine learning can be subdivided into two major categories - supervised and unsupervised. The repository is also divided in this way. It contains a mix of self-implemented modules, and modules implemented using the famous sklearn library.
 
