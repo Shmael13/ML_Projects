@@ -17,4 +17,4 @@ This directory contains implementations and demonstrations of:
 
 - **K_Means_Clustering** – Custom implementation of K-Means
 - **PCA** – Demonstration of  Principal Component Analysis on Penguins dataset
-- **SVD/** – Demonstration of Singular Value Decomposition for image compression
+- **SVD** – Demonstration of Singular Value Decomposition for image compression
