@@ -5,7 +5,7 @@ Unsupervised learning is a type of machine learning where the model explores pat
 - Discover hidden structures (K-Means Clustering)  
 - Reduce dimensionality (PCA, SVD)  
 
-This directory contains custom Python implementations of:
+This directory contains implementations and demonstrations of:
 
 - **K-Means Clustering**: groups similar data points into clusters based on feature similarity.
 - **Principal Component Analysis (PCA)**: reduces data dimensionality by finding directions of maximum variance.
