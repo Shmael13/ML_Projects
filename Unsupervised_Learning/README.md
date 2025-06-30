@@ -2,7 +2,7 @@
 
 Unsupervised learning is a type of machine learning where the model explores patterns or structures in data **without any labels or predefined categories**. It’s used to:
 
-- Discover hidden structures (clustering)  
+- Discover hidden structures (K-Means Clustering)  
 - Reduce dimensionality (PCA, SVD)  
 
 This directory contains custom Python implementations of:
