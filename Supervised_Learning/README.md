@@ -1,6 +1,6 @@
 # Supervised Learning Algorithms
 
-This repository contains hands-on implementations of key supervised learning algorithms using Python and scikit-learn. Each subdirectory focuses on a specific algorithm or family of algorithms
+This repository contains hands-on implementations and demonstrations of key supervised learning algorithms. Each subdirectory focuses on a specific algorithm or family of algorithms
 
 ## Directory structure
 
@@ -22,4 +22,4 @@ This repository contains hands-on implementations of key supervised learning alg
 
 - **Trees**
   - Covers decision tree classifiers, regressors and random forest
-  - Includes visualizations of tree structures
+  - Includes visualizations of tree structure
